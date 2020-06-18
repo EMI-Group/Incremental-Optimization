@@ -1,6 +1,6 @@
 # IOPs
 
-The official implementation of IOPs [1] with MATLAB:
+The official implementation of IOPs [1] with MATLAB.
 
 ## Reference
 
