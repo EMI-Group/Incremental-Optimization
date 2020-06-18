@@ -1,0 +1,79 @@
+
+DECC-G: Large Scale Evolutionary Optimization Using Cooperative Coevolution
+---------------------------------------------------------------------------
+
+
+Copyright
+=========
+The software is copyrighted by Zhenyu Yang. Permission is granted to copy and 
+use it for scientific, noncommercial purposes only.
+The software is provided "as is" and without any warranties.
+
+
+References
+==========
+The DECC-G algorithm:
+[1] Zhenyu Yang, Ke Tang and Xin Yao, "Large Scale Evolutionary Optimization 
+Using Cooperative Coevolution", Information Sciences, 178(15):2985-2999, 2008.
+
+The SaNSDE algorithm:
+[2] Zhenyu Yang, Ke Tang and Xin Yao, "Self-adaptive Differential Evolution 
+with Neighborhood Search", in Proceedings of the 2008 IEEE Congress on 
+Evolutionary Computation (CEC2008), Hongkong, China, 2008.
+
+
+ChangeLog
+=========
+2. Jan. 21, 2009
+   The FEs for subcomponent optimization in eacy cycle is changed to 200*100=2e4
+   to achieve a better performance.
+
+1. Sept. 1, 2008
+   Fixed the bug in f3 of the classical benchmark functions. The result of f3
+   is worse than the result in [1] now. Previously, f3 is implemented wrongly,
+   and now the correct version is much more difficult to optimize.
+   In benchmark/benchmark_func.m
+   
+   Before change:
+   line 78         tmp = tmp + x(k, i)*x(k, i);
+   line 79         ft = ft + tmp;
+   
+   After change:
+   line 78         tmp = tmp + x(k, i);
+   line 79         ft = ft + tmp*tmp;
+
+
+Notice
+======
+1. Jan 21, 2009
+   Only the classical benchmark functions were released together with this 
+   software, since the package of CEC'2005 functions contains a lot of data
+   files and is very big. 
+   The CEC'2005 test suite can be found in Dr. Suganthan's Homepage: 
+   http://www3.ntu.edu.sg/home/EPNSugan/
+
+
+Code Structure
+==============
+README:      this file.
+run.m:       the starting script
+runcompe.m:  set the search range
+decc.m:      the main search algorithm
+sansde.m:    the subcomponent optimizer
+de_weight.m: the adaptive weighting strategy
+grouping:    the random grouping algorithm
+getgpop.m:   a tool to generate complete individual based on weight
+benchmark/:  the bechmark functions
+result/:     store the final results
+trace/:      store the intermedia results
+
+
+Testing
+=======
+This software has been tested on Windows/Linux OS with Matlab 7.x.
+
+
+Contact
+=======
+ZhenyuYang, zhyuyang@mail.ustc.edu.cn
+

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#MOAB -N %NAME%
+#MOAB -l "nodes=1:ppn=1,walltime=10:0:0"
+#MOAB -k oe
+
+cd "$PBS_O_WORKDIR"
+
+module load apps/octave/v3.6.4
+
+octave --no-window-system %SCRIPT% $MOAB_JOBARRAYINDEX
