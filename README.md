@@ -1,6 +1,6 @@
-# IOPs
+# Incremental Optimization
 
-The official implementation of IOPs [1] with MATLAB.
+The official implementation of Incremental Optimization [1] with MATLAB.
 
 ## Reference
 
