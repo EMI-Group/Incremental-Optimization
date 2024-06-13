@@ -1,6 +1,6 @@
 # Incremental Optimization
 
-The official implementation of Incremental Optimization [1] with MATLAB.
+The source code of "Solving Incremental Optimization Problems via Cooperative Coevolution" in MATLAB.
 
 ## Reference
 
