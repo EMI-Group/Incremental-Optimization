@@ -1,6 +1,6 @@
 # Incremental Optimization
 
-The source code of "Solving Incremental Optimization Problems via Cooperative Coevolution" in MATLAB.
+The source code of "Solving Incremental Optimization Problems via Cooperative Coevolution"[1] in MATLAB.
 
 ## Reference
 
